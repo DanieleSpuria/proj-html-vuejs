@@ -1,4 +1,5 @@
 <script>
+  import {store} from './store';
   import Header from './components/Header.vue';
   import Main from './components/Main.vue';
   import Footer from './components/Footer.vue';
@@ -9,6 +10,12 @@
       Header,
       Main,
       Footer
+    },
+
+    data() {
+      return {
+        store
+      }
     }
   }
 </script>
@@ -20,5 +27,5 @@
 </template>
 
 <style lang="scss">
-  @import './assets/scss/main.scss';
+  @import './scss/main.scss';
 </style>
