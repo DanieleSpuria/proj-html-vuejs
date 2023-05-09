@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  FOOTER
+  <h1>FOOTER</h1>
 </template>
 
 <style lang="scss" scoped>

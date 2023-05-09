@@ -1,11 +1,11 @@
 <script>
   export default {
-    name: 'Header'    
+    name: 'Jumbo'    
   }
 </script>
 
 <template>
-  <h1>HEADER</h1>
+  <h1>JUMBO</h1>
 </template>
 
 <style lang="scss" scoped>
