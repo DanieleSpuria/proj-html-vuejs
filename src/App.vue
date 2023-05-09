@@ -22,12 +22,26 @@
   }
 </script>
 
+
+
+
+
+
+
+
 <template>
   <Header/>
   <Jumbo/>
   <Main/>
   <Footer/>
 </template>
+
+
+
+
+
+
+
 
 <style lang="scss">
   @import './scss/main.scss';
