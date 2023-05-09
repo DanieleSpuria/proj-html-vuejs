@@ -5,7 +5,9 @@
 </script>
 
 <template>
-  <h1>MAIN</h1>
+  <main>
+    <h1>MAIN</h1>
+  </main>
 </template>
 
 <style lang="scss" scoped>

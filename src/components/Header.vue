@@ -5,9 +5,10 @@
 </script>
 
 <template>
-  <h1>HEADER</h1>
+  <header>
+    <h1>HEADER</h1>
+  </header>
 </template>
 
 <style lang="scss" scoped>
-
 </style>

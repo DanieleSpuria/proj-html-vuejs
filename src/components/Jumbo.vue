@@ -5,7 +5,9 @@
 </script>
 
 <template>
-  <h1>JUMBO</h1>
+  <div class="jumbo">
+    <h1>JUMBO</h1>
+  </div>
 </template>
 
 <style lang="scss" scoped>
