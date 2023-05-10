@@ -68,7 +68,7 @@ export const store = reactive({
 
   courses: {
     text: {
-      img: 'Books-icon.png',
+      imgIcon: 'Books-icon.png',
       h2: 'Thousands of courses for any type of student',
       p: 'At EduPrime, it doesn’t matter what domain you wish to pursue a career in. Here you can find a course that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.',
       btn: 'Browse through courses'
@@ -122,7 +122,7 @@ export const store = reactive({
 
   year: {
     h2: 'University Year',
-    img: 'Clock-and-Bell.png',
+    imgIcon: 'Clock-and-Bell.png',
     imgTime: 'Timeline-Item.png',
     textTop: {
       demo: {
@@ -148,7 +148,7 @@ export const store = reactive({
 
   event: {
     h2: 'Upcoming Events',
-    img: 'upcoming-events-calendar-icon.png',
+    imgIcon: 'upcoming-events-calendar-icon.png',
     cards: {
       session1: {
         h3: 'Coaching Sessions',
@@ -198,8 +198,21 @@ export const store = reactive({
     }
   },
 
-  method: {
-
+  exams: {
+    method: {
+      imgIcon: 'Exam-icon.png',
+      h2: 'The most efficient examination method',
+      p: 'EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.',
+      btn: 'Discover the Method',
+      img: 'Exam-Illustration.png'
+    },
+    fees: {
+      imgIcon: 'Exam-icon-1.png',
+      h2: 'Variable fees for international students',
+      p: 'EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.',
+      btn: 'List of fees',
+      img: 'Girl-Illustration.png'
+    }
   },
 
   footerMenu: {

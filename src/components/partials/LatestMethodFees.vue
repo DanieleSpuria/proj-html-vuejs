@@ -12,7 +12,7 @@
     methods: {
       getImage(img) {
         return new URL (`../../assets/img/${img}`, import.meta.url).href
-      },
+      }
     }
   }
 </script>
@@ -57,29 +57,21 @@
         </div>
       </div>
       
-      <div id="method">
+      <div
+        class="ds-exams"
+        v-for="(exam, i) in store.exams"
+        :key="i"
+      >
         <div class="ds-text">
-          <img src="" alt="img">
-          <h2>method</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero facilis aperiam labore doloribus maxime eligendi deserunt voluptatibus a modi.
-          </p>
-          <button>BUTTON</button>
+          <img :src="getImage(exam.imgIcon)" class="ds-icon" alt="img">
+          <h2>{{ exam.h2 }}</h2>
+          <p>{{ exam.p }}</p>
+          <button class="ds-button ds-2">
+            <a href="#">{{ exam.btn }}</a>
+          </button>
         </div>
         
-        <img src="" alt="img">
-      </div>
-
-      <div id="fees">
-        <img src="" alt="img">
-        <div class="ds-text">
-          <img src="" alt="img">
-          <h2>fees</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero facilis aperiam labore doloribus maxime eligendi deserunt voluptatibus a modi.
-          </p>
-          <button>BUTTON</button>
-        </div>
+        <img :src="getImage(exam.img)" alt="img">
       </div>
     </div>
   </section>
@@ -120,10 +112,22 @@
       }
     }
 
-    #method,
-    #fees {
+    .ds-exams {
       display: flex;
-      padding: 100px 0;
+      padding-top: 100px;
+
+      &:nth-of-type(3) {
+        flex-direction: row-reverse;
+        padding-bottom: 100px;
+      }
+
+      button {
+
+        a {
+          text-decoration: none;
+          color: $text-1;
+        }
+      }
     }
   }
 </style>

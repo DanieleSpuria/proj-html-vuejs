@@ -36,7 +36,7 @@
     <div class="container">
       <div id="courses">
         <div class="ds-text">
-          <img :src="getImage(store.courses.text.img)" class="ds-icon" alt="img">
+          <img :src="getImage(store.courses.text.imgIcon)" class="ds-icon" alt="img">
           <h2>{{ store.courses.text.h2 }}</h2>
           <p>{{ store.courses.text.p }}</p>
           <button class="ds-button ds-1"> 

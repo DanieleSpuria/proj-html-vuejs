@@ -28,7 +28,7 @@
   <section>
     <div class="container">
       <div id="year">
-        <img :src="getImage(store.year.img)" class="ds-icon" alt="img">
+        <img :src="getImage(store.year.imgIcon)" class="ds-icon" alt="img">
         <h2>{{ store.year.h2 }}</h2>
         <div class="ds-box">
           <div
@@ -54,7 +54,7 @@
       </div>
       
       <div id="event">
-        <img :src="getImage(store.event.img)" class="ds-icon" alt="img">
+        <img :src="getImage(store.event.imgIcon)" class="ds-icon" alt="img">
         <h2>{{ store.event.h2 }}</h2>
         <div class="row">
           <div
