@@ -29,7 +29,6 @@
 
 <template>
   <Header/>
-  <Jumbo/>
   <Main/>
   <Footer/>
 </template>

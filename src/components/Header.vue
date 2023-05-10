@@ -68,8 +68,9 @@
       @include flex('vertical');
       justify-content: space-between;
       padding: 50px 40px;
-
+      
       border: 1px solid black;
+
       .ds-nav-bar {
         @include flex;
   
