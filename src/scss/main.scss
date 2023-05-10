@@ -1,5 +1,6 @@
 @import './partials/var';
 @import './partials/mixin';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 
 
@@ -7,6 +8,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Source Sans Pro;
 }
 
 li {
@@ -28,5 +33,14 @@ img {
   aspect-ratio: 1/1;
   border: 2px solid $border-5;
   border-radius: 50%;
+}
+
+.ds-button-1 {
+  margin-left: 35px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: none;
+  color: $text-1;
+  background-color: $background-5;
 }
 

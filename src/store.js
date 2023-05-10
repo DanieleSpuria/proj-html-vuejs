@@ -48,6 +48,23 @@ export const store = reactive({
     }
   },
 
+  slideJumbo: {
+    showCase: {
+      h1: 'Shocase your courses',
+      img: 'theme_slider1_bg-1.jpg'
+    },
+    key: {
+      h1: 'Key to your success',
+      img: 'theme_slider2_bg-1.jpg'
+    },
+    lead: {
+      h1: 'Lead. Inspire. Win!',
+      img: 'theme_slider3_bg-1.jpg'
+    },
+  },
+
+  p: 'EduPrime is the most versatile WordPress theme for educational purposes, showcasing universitiesm courses, secondary schools etc.',
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',

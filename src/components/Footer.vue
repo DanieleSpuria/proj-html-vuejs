@@ -25,9 +25,7 @@
         <div class="col">
           <div class="ds-left">
             <img class="ds-logo" src="../assets/img/theme_eduprime_logo.png" alt="logo">
-            <p>
-              EduPrime is the most versatile WordPress theme for educational purposes, showcasing universitiesm courses, secondary schools etc.
-            </p>
+            <p>{{store.p}}</p>
             <div class="ds-social">
               <div class="ds-circle">
                 <i class="fa-brands fa-facebook-f"></i>
