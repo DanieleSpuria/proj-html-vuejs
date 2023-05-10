@@ -215,6 +215,21 @@ export const store = reactive({
     }
   },
 
+  partners: {
+    h2: 'Partners',
+    p: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.',
+    logos: [
+      'partner-1.png',
+      'partner-2.png',
+      'partner-3.png',
+      'partner-4.png',
+      'partner-5.png',
+      'partner-6.png',
+      'partner-7.png',
+      'partner-8.png',
+    ]
+  },
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',
