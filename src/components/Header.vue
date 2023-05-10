@@ -5,6 +5,12 @@
     
     components: {
       Jumbo
+    },
+
+    methods: {
+      getImage(img) {
+        return new URL (`../assets/img/${img}`, import.meta.url).href
+      }
     }
   }
 </script>
@@ -19,32 +25,24 @@
 <template>
   <header>
     <div class="ds-header-top">
-      <img src="" alt="logo">
+      <img class="logo" src="../assets/img/theme_eduprime_logo.png" alt="logo">
       <div class="ds-nav-bar">
         <nav>
           <ul>
             <li class="dropdown-toggle">
-              text
+              <a href="#"></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-item">drop</li>
-                <li class="dropdown-item">drop</li>
-                <li class="dropdown-item">drop</li>
-                <li class="dropdown-item">drop</li>
                 <li class="dropdown-item">drop</li>
               </ul>
             </li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
           </ul>
         </nav>
   
         <button>BUTTON</button>
       </div>
     </div>
+
+    <img class="jumbo-slider" :src="getImage('theme_slider1_bg-1.jpg')" alt="">
 
     <div class="ds-header-bottom">
       <Jumbo/>
@@ -61,15 +59,26 @@
 
 <style lang="scss" scoped>
   @use '../scss/partials/mixin' as *;
+  @use '../scss/partials/var' as *;
 
   header {
+    position: relative;
+    background-color: $background-6;
+
+    .jumbo-slider {
+      position: absolute;
+      top: 0;
+      opacity: .2;
+    }
 
     .ds-header-top {
       @include flex('vertical');
       justify-content: space-between;
-      padding: 50px 40px;
+      padding: 50px;
       
-      border: 1px solid black;
+      .logo {
+        width: 270px
+      }
 
       .ds-nav-bar {
         @include flex;
