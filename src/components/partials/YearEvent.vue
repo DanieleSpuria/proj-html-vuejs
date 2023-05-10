@@ -15,6 +15,7 @@
   <section>
     <div class="container">
       <div id="year">
+        <img src="" alt="img">
         <h2>year</h2>
         <div class="ds-box">
           <div class="ds-box-text">

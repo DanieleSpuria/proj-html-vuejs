@@ -119,7 +119,27 @@ export const store = reactive({
     }
   },
 
-  facultyView: {},
+  year: {
+    h2: 'University Year',
+    text: {
+      demo: {
+        span: 'Demo Classes',
+        p: 'In the first week, students try to accommodate with the teaching style and choose their optional courses.'
+      },
+      graduation: {
+        span: 'Graduation Day',
+        p: 'On the day of graduation, all students gather for the ceremony and then network and party among others.'
+      },
+      orientation: {
+        span: 'Orientation',
+        p: 'First day of the university year, all students gather for the opening ceremony and then network with others.'
+      },
+      evaluation: {
+        span: 'Evaluation',
+        p: 'At the end of a semester, students take a general evaluation test for every subject they’re learning.'
+      }
+    }
+  },
 
   footerMenu: {
     eduPrime: {
