@@ -1,6 +1,7 @@
 import {reactive} from 'vue';
 
 export const store = reactive({
+  
   navMenu: {
     home: {
       name: 'Home',
@@ -121,21 +122,25 @@ export const store = reactive({
 
   year: {
     h2: 'University Year',
-    text: {
+    img: 'Clock-and-Bell.png',
+    imgTime: 'Timeline-Item.png',
+    textTop: {
       demo: {
-        span: 'Demo Classes',
+        h5: 'Demo Classes',
         p: 'In the first week, students try to accommodate with the teaching style and choose their optional courses.'
       },
       graduation: {
-        span: 'Graduation Day',
+        h5: 'Graduation Day',
         p: 'On the day of graduation, all students gather for the ceremony and then network and party among others.'
-      },
+      }
+    },
+    textBottom: {
       orientation: {
-        span: 'Orientation',
+        h5: 'Orientation',
         p: 'First day of the university year, all students gather for the opening ceremony and then network with others.'
       },
       evaluation: {
-        span: 'Evaluation',
+        h5: 'Evaluation',
         p: 'At the end of a semester, students take a general evaluation test for every subject they’re learning.'
       }
     }

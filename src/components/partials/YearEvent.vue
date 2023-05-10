@@ -1,6 +1,19 @@
 <script>
+  import {store} from '../../store';
   export default {
-    name: 'YearMethod'
+    name: 'YearMethod',
+
+    data() {
+      return {
+        store
+      }
+    },
+
+    methods: {
+      getImage(img) {
+        return new URL (`../../assets/img/${img}`, import.meta.url).href
+      },
+    }
   }
 </script>
 
@@ -15,35 +28,27 @@
   <section>
     <div class="container">
       <div id="year">
-        <img src="" alt="img">
-        <h2>year</h2>
+        <img :src="getImage(store.year.img)" class="ds-icon" alt="img">
+        <h2>{{ store.year.h2 }}</h2>
         <div class="ds-box">
-          <div class="ds-box-text">
-            <span>title</span>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, deleniti.
-            </p>
-          </div>
-          <div class="ds-box-text">
-            <span>title</span>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, deleniti.
-            </p>
+          <div
+            class="ds-box-text"
+            v-for="(text, i) of store.year.textTop"
+            :key="i"
+          >
+            <h5>{{ text.h5 }}</h5>
+            <p>{{ text.p }}</p>
           </div>
         </div>
-        <img src="" alt="img">
+        <img :src="getImage(store.year.imgTime)" alt="img">
         <div class="ds-box">
-          <div class="ds-box-text">
-            <span>title</span>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, deleniti.
-            </p>
-          </div>
-          <div class="ds-box-text">
-            <span>title</span>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, deleniti.
-            </p>
+          <div
+            class="ds-box-text"
+            v-for="(text, i) of store.year.textBottom"
+            :key="i"
+          >
+            <h5>{{ text.h5 }}</h5>
+            <p>{{ text.p }}</p>
           </div>
         </div>
       </div>
@@ -98,26 +103,25 @@
 
 <style lang="scss" scoped>
   @use '../../scss/partials/mixin' as *;
+  @use '../../scss/partials/var' as *;
 
   section {
-    border: 1px solid black;
+    color: $text-1;
+    background-color: $background-6;
 
     #year {
         @include flex;
         flex-direction: column;
         text-align: center;
-        border: 1px solid black;
-
 
         .ds-box {
           display: flex;
+          width: 60%;
         }
-
       }
 
    #event {
      text-align: center;
-     border: 1px solid black;
    }
   }
 </style>
