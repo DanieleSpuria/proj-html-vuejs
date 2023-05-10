@@ -12,7 +12,21 @@
     methods: {
       getImage(img) {
         return new URL (`../../assets/img/${img}`, import.meta.url).href
+      },
+
+      click(prevNext) {
+        if (store.counter === -1) store.counter = Object.keys(store.slideJumbo).length - 1;
+        else if (store.counter === Object.keys(store.slideJumbo).length) store.counter = 0; 
+        else prevNext; 
+      },
+
+      autoSlider() {
+        this.click(store.counter++)
       }
+    },
+
+    mounted() {
+      setInterval(this.autoSlider, 10000)
     }
   }
 </script>
@@ -27,13 +41,18 @@
 <template>
   <div class="ds-jumbo">
 
-    <i class="fa-solid fa-chevron-left arrow"></i>
+    <i class="fa-solid fa-chevron-left arrow" @click="click(store.counter--)"></i>
 
     <div class="ds-box-jumbo">
-      
-  
-      <h1>Title</h1>
-      <p>{{ store.p }}</p>
+      <div
+        class="ds-text"
+        v-for="(slide, i, index) of store.slideJumbo"
+        :key="i"
+        v-show="index === store.counter"
+      >
+        <h1>{{ slide.h1 }}</h1>
+        <p>{{ store.p }}</p>
+      </div>
       <button class="ds-button ds-1">
         <i class="fa-solid fa-magnifying-glass"></i>
         Search courses
@@ -44,7 +63,7 @@
       </button>
     </div>
 
-    <i class="fa-solid fa-chevron-right arrow"></i>
+    <i class="fa-solid fa-chevron-right arrow" @click="click(store.counter++)"></i>
 
   </div>
 </template>

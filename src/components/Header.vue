@@ -31,7 +31,7 @@
 
 <template>
   <header>
-    <img class="ds-img-slider" :src="getImage('theme_slider1_bg-1.jpg')" alt="img">
+    <img class="ds-img-slider" :src="getImage(`theme_slider${store.counter}_bg-1.jpg`)" alt="img">
     
     <div class="ds-box-header">
       <div class="ds-header-top">
@@ -98,7 +98,7 @@
     overflow: hidden;
 
     .ds-box-header {
-      background-color: #e56767ac;
+      background-color: #e56767d8;
 
       .ds-header-top {
         @include flex('vertical');
@@ -117,9 +117,14 @@
               padding-left: 0;
     
               .dropdown {
+                padding: 25px;
                 
                 &:hover > .dropdown-menu {
                   display: block;
+                }
+
+                .fa-solid {
+                  padding: 8px;
                 }
   
                 .dropdown-menu{
