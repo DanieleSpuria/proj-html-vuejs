@@ -1,6 +1,19 @@
 <script>
+  import {store} from '../../store';
   export default {
-    name: 'Partners'
+    name: 'Partners',
+
+    data() {
+      return {
+        store
+      }
+    },
+
+    methods: {
+      getImage(img) {
+        return new URL (`../../assets/img/${img}`, import.meta.url).href
+      }
+    }
   }
 </script>
 
@@ -15,22 +28,16 @@
   <section>
     <div class="container">
       <div id="partners">
-        <h2>partners</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, est.
-        </p>
-        <div class="ds-logos">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
-          <img src="" alt="logo">
+        <h2>{{ store.partners.h2 }}</h2>
+        <p>{{ store.partners.p }}</p>
+        <div class="row">
+          <div
+            class="col"
+            v-for="(logo, i) of store.partners.logos"
+            :key="i"
+          >
+            <img :src="getImage(logo)" class="ds-icon" alt="logo">
+          </div>
         </div>
       </div>
     </div>
@@ -46,13 +53,26 @@
 
 <style lang="scss" scoped>
   @use '../../scss/partials/mixin' as *;
+  @use '../../scss/partials/var' as *;
 
   section {
-    border: 1px solid black;
+    padding: 100px;
+    color: $text-13;
 
     #partners {
       text-align: center;
-      border: 1px solid black;
+
+      .row {
+        
+        .col {
+          @include flex;
+          padding: 20px;
+
+          img {
+            filter: invert(75%);
+          }
+        }
+      }
     }
   }
 </style>
