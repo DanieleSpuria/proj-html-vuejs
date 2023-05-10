@@ -44,25 +44,19 @@
           </div>
         </div>
   
-        <div class="col">
+        <div
+          class="col"
+          v-for="(menu, i) of store.footerMenu"
+          :key="i"
+        >
           <ul>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-          </ul>
-        </div>
-        
-        <div class="col">
-          <ul>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
+            <h3>{{ menu.name }}</h3>
+            <li
+              v-for="(li, liI) of menu.menu"
+              :key="liI" 
+            >
+              <a href="#">{{ li }}</a>
+            </li>
           </ul>
         </div>
         
@@ -88,8 +82,6 @@
               </div>
             </div>
               
-              
-            
             <span>ModelTheme. All rights reserved.</span>
           </div>
         </div>
@@ -159,17 +151,17 @@
           border: 1px solid $border-1;
           border-radius: 50px;
           font-size: 11px;
-
-          a {
-            text-decoration: none;
-            color: $text-1;
-          }
         }
       }
 
       span {
         color: $text-3;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-1;
     }
   }
 
