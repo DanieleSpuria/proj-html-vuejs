@@ -1,6 +1,13 @@
 <script>
+  import {store} from '../store';
   export default {
-    name: 'Footer'    
+    name: 'Footer',
+    
+    data() {
+      return {
+        store
+      }
+    }
   }
 </script>
 
@@ -67,11 +74,23 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </div>
-            <h6>search</h6>
-            <div class="ds-tag">text</div>
-            <div class="ds-tag">text</div>
-            <div class="ds-tag">text</div>
-            <span>all rights</span>
+          </div>
+          <div class="ds-categories">
+            <h6>Search categories</h6>
+            
+            <div class="ds-box-tag">
+              <div
+                class="ds-tag"
+                v-for="(tag, i) of store.footerTag"
+                :key="i"
+              >
+                <a href="#">{{ tag }}</a>
+              </div>
+            </div>
+              
+              
+            
+            <span>ModelTheme. All rights reserved.</span>
           </div>
         </div>
       </div>
@@ -120,11 +139,38 @@
       .ds-circle.ds-glass {
         margin-right: 0;
         width: 75px;
-        background-color: $border-5;
+        background-color: $background-5;
       }
     
     }
 
+    .ds-categories {
+      text-align:end;
+
+      .ds-box-tag {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+
+        .ds-tag {
+          margin-left: 10px;
+          margin-top: 10px;
+          padding: 8px 20px;
+          border: 1px solid $border-1;
+          border-radius: 50px;
+          font-size: 11px;
+
+          a {
+            text-decoration: none;
+            color: $text-1;
+          }
+        }
+      }
+
+      span {
+        color: $text-3;
+      }
+    }
   }
 
 </style>

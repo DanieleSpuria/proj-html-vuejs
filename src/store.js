@@ -71,5 +71,15 @@ export const store = reactive({
         'My account'
       ]
     }
-  }
+  },
+
+  footerTag: [
+    'ECONOMY',
+    'DESIGN',
+    'COACHING',
+    'BUSINESS',
+    'MEDICINE',
+    'LAW',
+    'FITNESS'
+  ]
 }) 
