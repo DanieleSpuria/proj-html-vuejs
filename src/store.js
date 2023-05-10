@@ -1,7 +1,7 @@
 import {reactive} from 'vue';
 
 export const store = reactive({
-  dropMenu: {
+  navMenu: {
     li: {
       name: 'Home',
       menu: [
