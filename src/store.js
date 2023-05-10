@@ -65,6 +65,17 @@ export const store = reactive({
 
   p: 'EduPrime is the most versatile WordPress theme for educational purposes, showcasing universitiesm courses, secondary schools etc.',
 
+  courses: {
+    text: {
+      img: 'Books-icon.png',
+      h2: 'Thousands of courses for any type of student',
+      p: 'At EduPrime, it doesn’t matter what domain you wish to pursue a career in. Here you can find a course that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.',
+      btn: 'Browse through courses'
+    },
+    img: 'Graduation-Illustration.png'
+    
+  },
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',

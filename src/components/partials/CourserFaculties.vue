@@ -1,6 +1,19 @@
 <script>
+  import {store} from '../../store';
   export default {
-    name: 'CourserFaculties'
+    name: 'CourserFaculties',
+
+    data() {
+      return {
+        store
+      }
+    },
+
+    methods: {
+      getImage(img) {
+        return new URL (`../../assets/img/${img}`, import.meta.url).href
+      }
+    }
   }
 </script>
 
@@ -16,13 +29,16 @@
     <div class="container">
       <div id="courses">
         <div class="ds-text">
-          <h2>courses</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex non commodi, quasi enim id architecto animi iusto distinctio molestiae!
-          </p>
-          <button>BUTTON</button>
+          <img :src="getImage(store.courses.text.img)" alt="img">
+          <h2>{{ store.courses.text.h2 }}</h2>
+          <p>{{ store.courses.text.p }}</p>
+          <button class="ds-button-1"> 
+            <a href="#">{{ store.courses.text.btn }}</a>
+          </button>
         </div>
-        <img src="" alt="img">
+        <div class="ds-img">
+          <img :src="getImage(store.courses.img)" alt="img">
+        </div>
       </div>
 
       <div id="faculties">
@@ -57,14 +73,19 @@
 
 <style lang="scss" scoped>
   @use '../../scss/partials/mixin' as *;
+  @use '../../scss/partials/var' as *;
 
   section {
-    border: 1px solid black;
 
     #courses {
         @include flex('vertical');
 
-        border: 1px solid black;
+        .ds-text {
+
+          img {
+            width: 60px
+          }
+        }
       }
 
     #faculties {
@@ -80,6 +101,11 @@
         width: 100%;
         border: 1px solid black;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-1;
     }
   }
 </style>
