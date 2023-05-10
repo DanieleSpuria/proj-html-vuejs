@@ -32,7 +32,7 @@
 <template>
   <header>
     <div class="ds-header-top">
-      <img class="logo" src="../assets/img/theme_eduprime_logo.png" alt="logo">
+      <img class="ds-logo" src="../assets/img/theme_eduprime_logo.png" alt="logo">
       <div class="ds-nav-bar">
         <nav>
           <ul>
@@ -80,6 +80,7 @@
 
   header {
     position: relative;
+    color: $text-1;
     background-color: $background-6;
 
     .jumbo-slider {
@@ -93,10 +94,6 @@
       justify-content: space-between;
       padding: 50px;
       
-      .logo {
-        width: 270px
-      }
-
       .ds-nav-bar {
         @include flex;
   
