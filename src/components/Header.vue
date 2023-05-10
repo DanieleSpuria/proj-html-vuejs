@@ -40,12 +40,16 @@
           <nav>
             <ul>
               <li
-                class="dropdown-toggle"
+                class="dropdown"
                 v-for="(li, i) of store.navMenu"
                 :key="i"
               >
                 <a href="#">{{ li.name }}</a>
-                <ul class="dropdown-menu">
+                <i class="fa-solid fa-caret-down" v-if="li.menu"></i>
+                <ul
+                  class="dropdown-menu"
+                  v-if="li.menu"
+                >
                   <li
                     class="dropdown-item"
                     v-for="(liMenu, iMenu) of li.menu"
@@ -112,7 +116,7 @@
               margin-bottom: 0;
               padding-left: 0;
     
-              .dropdown-toggle {
+              .dropdown {
                 
                 &:hover > .dropdown-menu {
                   display: block;
