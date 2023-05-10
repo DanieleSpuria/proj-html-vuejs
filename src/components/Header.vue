@@ -17,7 +17,16 @@
     <div class="ds-nav-bar">
       <nav>
         <ul>
-          <li>text</li>
+          <li class="dropdown-toggle">
+            text
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">drop</li>
+              <li class="dropdown-item">drop</li>
+              <li class="dropdown-item">drop</li>
+              <li class="dropdown-item">drop</li>
+              <li class="dropdown-item">drop</li>
+            </ul>
+          </li>
           <li>text</li>
           <li>text</li>
           <li>text</li>
@@ -60,6 +69,18 @@
           @include flex;
           margin-bottom: 0;
           padding-left: 0;
+
+          .dropdown-toggle {
+            
+            &:hover > .dropdown-menu {
+              display: block;
+            }
+
+            .dropdown-menu{
+              display: none;
+
+            }
+          }
         }
       }
 
