@@ -54,11 +54,13 @@
       </div>
       
       <div id="event">
+        <img src="" class="ds-icon" alt="img">
         <h2>event</h2>
         <div class="row">
           <div class="col">
             <div class="ds-card">
               <h3>title</h3>
+              <i class="fa-regular fa-calendar-days"></i>
               <span>data</span>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.

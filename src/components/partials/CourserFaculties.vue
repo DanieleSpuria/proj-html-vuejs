@@ -106,13 +106,6 @@
 
     #courses {
         @include flex('vertical');
-
-        .ds-text {
-
-          // img {
-          //   width: 60px
-          // }
-        }
       }
 
     #faculties {

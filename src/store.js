@@ -146,6 +146,28 @@ export const store = reactive({
     }
   },
 
+  event: {
+    h2: 'Upcoming Events',
+    img: 'upcoming-events-calendar-icon.png',
+    cards: {
+      session1: {
+        h3: 'Coaching Sessions',
+        span: '20 May 21:30 PM',
+        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]'
+      },
+      session2: {
+        h3: 'Coaching Sessions',
+        span: '24 Mar 18:00 PM',
+        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]'
+      },
+      session3: {
+        h3: 'Coaching Sessions',
+        span: '12 Feb 13:30 PM',
+        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]'
+      }
+    }
+  },
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',
