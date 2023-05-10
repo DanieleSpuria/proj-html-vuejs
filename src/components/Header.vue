@@ -1,10 +1,17 @@
 <script>
+  import {store} from '../store';
   import Jumbo from './partials/Jumbo.vue';
   export default {
     name: 'Header',
     
     components: {
       Jumbo
+    },
+
+    data() {
+      return {
+        store
+      }
     },
 
     methods: {
@@ -29,10 +36,20 @@
       <div class="ds-nav-bar">
         <nav>
           <ul>
-            <li class="dropdown-toggle">
-              <a href="#"></a>
+            <li
+              class="dropdown-toggle"
+              v-for="(li, i) of store.navMenu"
+              :key="i"
+            >
+              <a href="#">{{ li.name }}</a>
               <ul class="dropdown-menu">
-                <li class="dropdown-item">drop</li>
+                <li
+                  class="dropdown-item"
+                  v-for="(liMenu, iMenu) of li.menu"
+                  :key="iMenu"
+                >
+                  <a href="#">{{ liMenu }}</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -96,10 +113,15 @@
               &:hover > .dropdown-menu {
                 display: block;
               }
-  
+
               .dropdown-menu{
                 display: none;
-  
+ 
+              }
+
+              a {
+                text-decoration: none;
+                color: $text-1;
               }
             }
           }

@@ -2,7 +2,7 @@ import {reactive} from 'vue';
 
 export const store = reactive({
   navMenu: {
-    li: {
+    home: {
       name: 'Home',
       menu: [
         'Driving School',
@@ -11,7 +11,7 @@ export const store = reactive({
         'Header Video'
       ]
     },
-    li: {
+    courses: {
       name: 'Courses',
       menu: [
         'Our Courses',
@@ -20,10 +20,10 @@ export const store = reactive({
         'Become A Teacher'
       ]
     },
-    li: {
+    aboutsUs: {
       name: 'Abouts Us'
     },
-    li: {
+    news: {
       name: 'News',
       menu: [
         'Edu Prime Blog',
@@ -31,7 +31,7 @@ export const store = reactive({
         'Category Posts'
       ]
     },
-    li: {
+    pages: {
       name: 'Pages',
       menu: [
         'How It Works',
@@ -40,10 +40,10 @@ export const store = reactive({
         'Single Product'
       ]
     },
-    li: {
+    contact: {
       name: 'Contact',
     },
-    li: {
+    purchase: {
       name: 'Purchase',
     }
   }
