@@ -54,43 +54,28 @@
       </div>
       
       <div id="event">
-        <img src="" class="ds-icon" alt="img">
-        <h2>event</h2>
+        <img :src="getImage(store.event.img)" class="ds-icon" alt="img">
+        <h2>{{ store.event.h2 }}</h2>
         <div class="row">
-          <div class="col">
+          <div
+            class="col"
+            v-for="(event, i) of store.event.cards"
+            :key="i"
+          >
             <div class="ds-card">
-              <h3>title</h3>
+              <h3>{{ event.h3 }}</h3>
               <i class="fa-regular fa-calendar-days"></i>
-              <span>data</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.
-              </p>
-              <button>BUTTON</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="ds-card">
-              <h3>title</h3>
-              <span>data</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.
-              </p>
-              <button>BUTTON</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="ds-card">
-              <h3>title</h3>
-              <span>data</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.
-              </p>
-              <button>BUTTON</button>
+              <span>{{ event.span }}</span>
+              <p>{{ event.p }}</p>
+              <button class="ds-button ds-2">
+                <i class="fa-solid fa-plus"></i>
+                Find More
+              </button>
             </div>
           </div>
         </div>
         
-        <button>BUTTON</button>
+        <button class="ds-button ds-1">View All Events</button>
       </div>
     </div>
   </section>  
@@ -124,6 +109,38 @@
 
    #event {
      text-align: center;
+
+      .row {
+        margin: 80px;
+
+        .ds-card {
+         position: relative;
+         padding: 40px 30px;
+         color: $text-13;
+         background-color: $background-1;
+         border-radius: 15px;
+   
+         span,
+         p,
+         i {
+           color: $text-9;
+         }
+   
+         button {
+           position: absolute;
+           left: 0;
+           bottom: 0;
+           translate: 100% 50%;
+           margin-left: 0;
+           padding: 10px 20px;
+           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.201);
+   
+           i {
+             color: $text-1;
+           }
+         }
+        }
+      }
    }
   }
 </style>
