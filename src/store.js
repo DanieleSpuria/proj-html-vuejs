@@ -168,6 +168,36 @@ export const store = reactive({
     }
   },
 
+  latest: {
+    h2: 'Latest Courses',
+    cards: {
+      decisions: {
+        img: 'Decisions-icon.png',
+        h3: 'Make Better Decisions',
+        teacher: 'James Colins',
+        price: '$21.00',
+      },
+      speaker: {
+        img: 'Speaker-icon.png',
+        h3: 'How to be a speaker',
+        teacher: 'James Colins',
+        price: 'Price: Free',
+      },
+      network: {
+        img: 'Network-icon.png',
+        h3: 'Network Introductions',
+        teacher: 'James Colins',
+        price: 'Free',
+      },
+      managment: {
+        img: 'Brand-icon.png',
+        h3: 'Brand Management',
+        teacher: 'James Colins',
+        price: 'Free',
+      }
+    }
+  },
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',

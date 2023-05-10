@@ -1,6 +1,13 @@
 <script>
+  import {store} from '../../store';
   export default {
-    name: 'LatestMethodFees'
+    name: 'LatestMethodFees',
+
+    data() {
+      return {
+        store
+      }
+    }
   }
 </script>
 
@@ -15,36 +22,13 @@
   <section>
     <div class="container">
       <div id="latest">
-        <h2>title</h2>
+        <h2>{{ store.latest.h2 }}</h2>
         <div class="row">
-          <div class="col">
-            <div class="ds-card">
-              <img src="" alt="img">
-              <h3>title</h3>
-              <span>teacher</span>
-              <span>price</span>
-              <button>BUTTON</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="ds-card">
-              <img src="" alt="img">
-              <h3>title</h3>
-              <span>teacher</span>
-              <span>price</span>
-              <button>BUTTON</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="ds-card">
-              <img src="" alt="img">
-              <h3>title</h3>
-              <span>teacher</span>
-              <span>price</span>
-              <button>BUTTON</button>
-            </div>
-          </div>
-          <div class="col">
+          <div
+            class="col"
+            v-for="(card, i) of store.latest.cards"
+            :key="i"
+          >
             <div class="ds-card">
               <img src="" alt="img">
               <h3>title</h3>
@@ -68,6 +52,7 @@
         
         <img src="" alt="img">
       </div>
+
       <div id="fees">
         <img src="" alt="img">
         <div class="ds-text">

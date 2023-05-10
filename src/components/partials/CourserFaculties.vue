@@ -125,6 +125,7 @@
             .ds-card {
               padding: 40px 50px;
               border: 1px solid $border-4;
+              cursor: pointer;
               
               img {
                 width: 80px;
