@@ -7,6 +7,12 @@
       return {
         store
       }
+    },
+
+    methods: {
+      getImage(img) {
+        return new URL (`../../assets/img/${img}`, import.meta.url).href
+      },
     }
   }
 </script>
@@ -30,11 +36,11 @@
             :key="i"
           >
             <div class="ds-card">
-              <img src="" alt="img">
-              <h3>title</h3>
-              <span>teacher</span>
-              <span>price</span>
-              <button>BUTTON</button>
+              <img :src="getImage(card.img)" class="ds-icon" alt="img">
+              <h3>{{ card.h3 }}</h3>
+              <span>{{card.teacher}}</span>
+              <span>{{card.price}}</span>
+              <button class="ds-button ds-2 ds-3">View Courses</button>
             </div>
           </div>
         </div>
@@ -77,18 +83,27 @@
 
 <style lang="scss" scoped>
   @use '../../scss/partials/mixin' as *;
+  @use '../../scss/partials/var' as *;
 
   section {
-    border: 1px solid black;
+    color: $text-13;
 
     #latest {
-      border: 1px solid black;
+      padding-top: 100px;
+
+      .ds-card {
+        position: relative;
+        text-align: center;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px $border-4;
+      }
     }
 
     #method,
     #fees {
       display: flex;
-      border: 1px solid black;
+      padding: 100px 0;
     }
   }
 </style>

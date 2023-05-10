@@ -106,12 +106,14 @@
 
     #courses {
         @include flex('vertical');
+        padding-top: 100px;
       }
 
     #faculties {
       @include flex('vertical');
       flex-direction: column;
       width: 100%;
+      padding: 100px 0;
       .ds-top {
         width: 100%;
         text-align: center;

@@ -67,7 +67,7 @@
               <i class="fa-regular fa-calendar-days"></i>
               <span>{{ event.span }}</span>
               <p>{{ event.p }}</p>
-              <button class="ds-button ds-2">
+              <button class="ds-button ds-2 ds-3">
                 <i class="fa-solid fa-plus"></i>
                 Find More
               </button>
@@ -97,22 +97,21 @@
     background-color: $background-6;
 
     #year {
-        @include flex;
-        flex-direction: column;
-        text-align: center;
-
-        .ds-box {
-          display: flex;
-          width: 60%;
-        }
+      padding-top: 100px;
+      @include flex;
+      flex-direction: column;
+      text-align: center;
+      .ds-box {
+        display: flex;
+        width: 60%;
       }
+    }
 
    #event {
-     text-align: center;
-
-      .row {
+    padding: 100px 0;
+    text-align: center;
+     .row {
         margin: 80px;
-
         .ds-card {
          position: relative;
          padding: 40px 30px;
@@ -120,25 +119,18 @@
          background-color: $background-1;
          border-radius: 15px;
    
-         span,
-         p,
-         i {
-           color: $text-9;
-         }
-   
-         button {
-           position: absolute;
-           left: 0;
-           bottom: 0;
-           translate: 100% 50%;
-           margin-left: 0;
-           padding: 10px 20px;
-           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.201);
-   
-           i {
-             color: $text-1;
-           }
-         }
+          span,
+          p,
+          i {
+            color: $text-9;
+          }
+        
+          button {
+          
+            i {
+              color: $text-1;
+            }
+          }
         }
       }
     }
