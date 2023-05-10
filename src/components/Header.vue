@@ -58,7 +58,7 @@
             </ul>
           </nav>
     
-          <button class="ds-button-1">VIEW COURSES</button>
+          <button class="ds-button ds-1">VIEW COURSES</button>
         </div>
       </div>
       

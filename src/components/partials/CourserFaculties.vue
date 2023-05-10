@@ -12,6 +12,13 @@
     methods: {
       getImage(img) {
         return new URL (`../../assets/img/${img}`, import.meta.url).href
+      },
+
+      view(faculty) {
+        Object.values(store.faculties.bottom).forEach(key => {
+          key.active = false;
+        });
+        faculty.active = true;
       }
     }
   }
@@ -32,7 +39,7 @@
           <img :src="getImage(store.courses.text.img)" alt="img">
           <h2>{{ store.courses.text.h2 }}</h2>
           <p>{{ store.courses.text.p }}</p>
-          <button class="ds-button-1"> 
+          <button class="ds-button ds-1"> 
             <a href="#">{{ store.courses.text.btn }}</a>
           </button>
         </div>
@@ -40,23 +47,42 @@
           <img :src="getImage(store.courses.img)" alt="img">
         </div>
       </div>
+    </div>
 
-      <div id="faculties">
-        <div class="ds-top">
-          <h2>faculties</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, error.
-          </p>
-          <div class="slide">SLIDE</div>
+    <div id="faculties">
+      <div class="ds-top">
+        <h2>{{ store.faculties.top.h2 }}</h2>
+        <p>{{ store.faculties.top.p }}</p>
+        <div class="ds-box-row">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col"
+                v-for="(faculty, i) of store.faculties.bottom"
+                :key="i"
+                @click="view(faculty)"
+              >
+                <div class="ds-card">
+                  <img :src="getImage(faculty.imgV2)" alt="faculty">
+                  <h6>{{ faculty.h3 }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ds-bottom">
-          <img src="" alt="img">
+      </div>
+      <div class="container">
+        <div
+          class="ds-bottom"
+          v-show="faculty.active"
+          v-for="(faculty, i) of store.faculties.bottom"
+          :key="i"
+        >
+          <img :src="getImage(faculty.img)" alt="img">
           <div class="ds-text">
-            <h3>title</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis ullam vel explicabo quo quis natus corporis, dolorem at necessitatibus! Reprehenderit?
-            </p>
-            <button>BUTTON</button>
+            <h3>{{ faculty.h3 }}</h3>
+            <p>{{ faculty.p }}</p>
+            <button class="ds-button ds-2">Read more</button>
           </div>
         </div>
       </div>
@@ -76,6 +102,7 @@
   @use '../../scss/partials/var' as *;
 
   section {
+    color: $text-13;
 
     #courses {
         @include flex('vertical');
@@ -92,14 +119,37 @@
       @include flex('vertical');
       flex-direction: column;
       width: 100%;
-      border: 1px solid black;
       .ds-top {
+        width: 100%;
         text-align: center;
+
+        .ds-box-row {
+          box-shadow: 0 0 15px $border-4;
+
+          .col {
+            padding: 0;
+
+            .ds-card {
+              padding: 40px 50px;
+              border: 1px solid $border-4;
+              
+              img {
+                width: 80px;
+              }
+    
+              h6 {
+                margin-top: 15px;
+                color: $text-5;
+              }
+            }
+          }
+        }
+
+
       }
       .ds-bottom {
         @include flex;
         width: 100%;
-        border: 1px solid black;
       }
     }
 

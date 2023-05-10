@@ -34,11 +34,11 @@
   
       <h1>Title</h1>
       <p>{{ store.p }}</p>
-      <button class="ds-button-1">
+      <button class="ds-button ds-1">
         <i class="fa-solid fa-magnifying-glass"></i>
         Search courses
       </button>
-      <button class="ds-button-1 ds-plus">
+      <button class="ds-button ds-plus">
         <i class="fa-solid fa-user-plus"></i>
         Apply for university
       </button>

@@ -35,12 +35,20 @@ img {
   border-radius: 50%;
 }
 
-.ds-button-1 {
+.ds-button {
   margin-left: 35px;
   padding: 20px 40px;
   border-radius: 50px;
   border: none;
+}
+
+.ds-button.ds-1 {
   color: $text-1;
   background-color: $background-5;
+}
+
+.ds-button.ds-2 {
+  color: $text-1;
+  background-color: $background-6;
 }
 
