@@ -38,9 +38,20 @@
             <div class="ds-card">
               <img :src="getImage(card.img)" class="ds-icon" alt="img">
               <h3>{{ card.h3 }}</h3>
-              <span>{{card.teacher}}</span>
-              <span>{{card.price}}</span>
-              <button class="ds-button ds-2 ds-3">View Courses</button>
+              <div class="ds-text-card">
+                <i class="fa-regular fa-user"></i>
+                <span>{{card.teacher}}</span>
+              </div>
+              <div class="ds-text-card">
+                <i class="fa-regular fa-money-bill-1"></i>
+                <span>{{card.price}}</span>
+              </div>
+              <button class="ds-button ds-2 ds-3">
+                <a href="#">
+                  <i class="fa-solid fa-eye"></i>
+                  View Courses
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -97,6 +108,15 @@
         padding: 40px 30px;
         border-radius: 10px;
         box-shadow: 0 0 15px $border-4;
+
+        button {
+          box-shadow: 0 0 0;
+
+          a {
+            text-decoration: none;
+            color: $text-1;
+          }
+        }
       }
     }
 

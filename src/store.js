@@ -180,20 +180,20 @@ export const store = reactive({
       speaker: {
         img: 'Speaker-icon.png',
         h3: 'How to be a speaker',
-        teacher: 'James Colins',
+        teacher: 'Teacher: James Colins',
         price: 'Price: Free',
       },
       network: {
         img: 'Network-icon.png',
         h3: 'Network Introductions',
-        teacher: 'James Colins',
-        price: 'Free',
+        teacher: 'Teacher: James Colins',
+        price: 'Price: Free',
       },
       managment: {
         img: 'Brand-icon.png',
         h3: 'Brand Management',
-        teacher: 'James Colins',
-        price: 'Free',
+        teacher: 'Teacher: James Colins',
+        price: 'Price: Free',
       }
     }
   },
