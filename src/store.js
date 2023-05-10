@@ -198,6 +198,10 @@ export const store = reactive({
     }
   },
 
+  method: {
+
+  },
+
   footerMenu: {
     eduPrime: {
       name: 'Get EduePrime',

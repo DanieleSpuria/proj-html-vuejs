@@ -150,8 +150,7 @@
                 }
 
                 img {
-                  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(229deg) brightness(102%) contrast(101%);
-                  // TODO: dovrebbe essere bianco
+                  filter: brightness(0) invert(1);
                 }
               }
           }
