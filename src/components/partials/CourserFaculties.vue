@@ -62,7 +62,10 @@
                 :key="i"
                 @click="view(faculty)"
               >
-                <div class="ds-card">
+                <div
+                  class="ds-card"
+                  :class="{'ds-active' : faculty.active}"
+                >
                   <img :src="getImage(faculty.imgV2)" alt="faculty">
                   <h6>{{ faculty.h3 }}</h6>
                 </div>
@@ -138,6 +141,19 @@
                 color: $text-5;
               }
             }
+
+              .ds-active {
+                background-color: $background-6;
+
+                h6 {
+                  color: $text-1;
+                }
+
+                img {
+                  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(229deg) brightness(102%) contrast(101%);
+                  // TODO: dovrebbe essere bianco
+                }
+              }
           }
         }
 
