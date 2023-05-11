@@ -110,6 +110,11 @@
       background-image: url('../assets/img/Wave-1.png');
     }
 
+    .ds-button:hover {
+      color: $text-5;
+      background-color: $background-1;
+    }
+
     .ds-box-header {
       background-color: #e56767d8;
 

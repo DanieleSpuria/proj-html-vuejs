@@ -105,11 +105,21 @@
       p {
         margin-bottom: 50px;
       }
+
+      .ds-button.ds-1:hover {
+        color: $text-5;
+        background-color: $background-1;
+      }
       
       .ds-button.ds-plus {
         margin-left: 34px;  
         color: $text-5;
         background-color: $background-1;
+
+        &:hover {
+          color: $text-1;
+          background-color: $background-5;
+        }
       }
       
       h1 {

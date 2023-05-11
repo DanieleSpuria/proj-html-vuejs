@@ -50,11 +50,19 @@ input:focus {
 .ds-button.ds-1 {
   color: $text-1;
   background-color: $background-5;
+
+  &:hover {
+    background-color: $background-6;
+  }
 }
 
 .ds-button.ds-2 {
   color: $text-1;
   background-color: $background-6;
+
+  &:hover {
+    background-color: $background-5;
+  }
 }
 
 .ds-button.ds-3 {
