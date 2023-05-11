@@ -22,6 +22,10 @@ img {
   width: 100%;
 }
 
+input:focus {
+  outline: none;
+}
+
 .ds-logo {
   width: 270px
 }
