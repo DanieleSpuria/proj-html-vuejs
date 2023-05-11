@@ -65,7 +65,6 @@
       .ds-circle.ds-glass {
         margin-right: 0;
         width: 75px;
-        background-color: $background-5;
       }
     
     }

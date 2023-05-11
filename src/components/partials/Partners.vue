@@ -74,6 +74,11 @@
             width: auto;
             height: 50px;
             filter: invert(75%);
+
+            &:hover {
+            filter: invert(0);
+              
+            }
           }
         }
       }

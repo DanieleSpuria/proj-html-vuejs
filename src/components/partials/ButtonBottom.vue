@@ -53,7 +53,7 @@
 
       .ds-btn-btm {
         width: 180px;
-        margin: 6px 0;
+        margin: 8px 0;
         padding: 10px;
         color: #e8e8e8;
         background-color: $background-8;
@@ -61,6 +61,21 @@
         border: none;
         box-shadow: 0 8px 6px rgba(0, 0, 0, 0.326);
         font-size: 11px;
+        transition: all .5s;
+
+        &:first-of-type:hover {
+          background-color: #e99c58;
+          transform: translateY(-8px);
+        }
+
+        &:first-of-type:hover img {
+          filter: invert(100) grayscale(100);
+        }
+
+        &:nth-of-type(2):hover {
+          background-color: #e97c58;
+          transform: translateY(-8px);
+        }
 
         img {
           display: inline-block;
@@ -76,7 +91,6 @@
         width: 40px;
         margin: 0;
         color: $text-1;
-        background-color: $background-5;
         
         img {
           width: 18px;

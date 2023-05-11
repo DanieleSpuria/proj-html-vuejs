@@ -133,9 +133,13 @@
               @include flex;
               margin-bottom: 0;
               padding-left: 0;
-    
+              
               .dropdown {
                 padding: 25px;
+
+                &:hover {
+                  color: $text-3;
+                }
                 
                 &:hover > .dropdown-menu {
                   display: block;
@@ -157,6 +161,11 @@
                 a {
                   text-decoration: none;
                   color: $text-1;
+
+                  
+                  &:hover {
+                    color: $text-3;
+                  }
                 }
               }
             }

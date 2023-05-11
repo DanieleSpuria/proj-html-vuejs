@@ -36,9 +36,13 @@ input:focus {
   margin-right: 10px;
   width: 50px;
   aspect-ratio: 1/1;
-  border: 2px solid $border-5;
   border-radius: 50%;
+  background-color: $background-5;
   cursor: pointer;
+
+  &:hover {
+    background-color: $background-6
+  }
 }
 
 .ds-button {

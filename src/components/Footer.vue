@@ -50,6 +50,7 @@
           <ul>
             <h3>{{ menu.name }}</h3>
             <li
+              class="ds-footer-menu"
               v-for="(li, liI) of menu.menu"
               :key="liI" 
             >
@@ -108,7 +109,20 @@
 
       .ds-social {
         display: flex;
+
+        .ds-circle {
+          border: 2px solid $border-5;
+          background-color: $background-6;
+
+          &:hover {
+            background-color: $background-5;
+          }
+        }
       }
+    }
+
+    .ds-footer-menu:hover a{
+      color: $text-3;
     }
 
     .ds-search-bar {
@@ -129,7 +143,6 @@
       .ds-circle.ds-glass {
         margin-right: 0;
         width: 75px;
-        background-color: $background-5;
       }
     
     }
@@ -141,7 +154,7 @@
         display: flex;
         justify-content: end;
         flex-wrap: wrap;
-
+        
         .ds-tag {
           margin-left: 10px;
           margin-top: 10px;
@@ -149,6 +162,11 @@
           border: 1px solid $border-1;
           border-radius: 50px;
           font-size: 11px;
+          
+          &:hover {
+          background-color: $background-5;
+          border: $border-5;
+          }
         }
       }
 
