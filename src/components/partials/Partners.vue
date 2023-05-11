@@ -61,6 +61,12 @@
     background-image: url('../../assets/img/background-wave3.png');
     background-color: $background-4 ;
 
+    h2,
+    h3,
+    p {
+      margin-bottom: 40px;
+    }
+
     #partners {
       text-align: center;
 

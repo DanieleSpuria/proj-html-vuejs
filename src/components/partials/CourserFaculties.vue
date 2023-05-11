@@ -41,7 +41,7 @@
             <h2>{{ store.courses.text.h2 }}</h2>
             <p>{{ store.courses.text.p }}</p>
             <button class="ds-button ds-1"> 
-              <a href="#">{{ store.courses.text.btn }}</a>
+              <a class="ds-a" href="#">{{ store.courses.text.btn }}</a>
             </button>
           </div>
           <div class="ds-img">
@@ -110,6 +110,12 @@
   section {
     color: $text-13;
 
+    h2,
+    h3,
+    p {
+      margin-bottom: 40px;
+    }
+
     .ds-waves {
       height: 186px;
       background-image: url('../../assets/svg/svg-0.svg');
@@ -119,9 +125,9 @@
       background-image: url('../../assets/img/home-background.png');
 
       #courses {
-          @include flex('vertical');
-          padding: 100px 0;
-        }
+        @include flex('vertical');
+        padding: 100px 0;
+      }
     }
 
 
@@ -168,18 +174,11 @@
               }
           }
         }
-
-
       }
       .ds-bottom {
         @include flex;
         width: 100%;
       }
-    }
-
-    a {
-      text-decoration: none;
-      color: $text-1;
     }
   }
 </style>

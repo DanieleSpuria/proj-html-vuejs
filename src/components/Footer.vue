@@ -54,7 +54,7 @@
               v-for="(li, liI) of menu.menu"
               :key="liI" 
             >
-              <a href="#">{{ li }}</a>
+              <a class="ds-a" href="#">{{ li }}</a>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@
                 v-for="(tag, i) of store.footerTag"
                 :key="i"
               >
-                <a href="#">{{ tag }}</a>
+                <a class="ds-a" href="#">{{ tag }}</a>
               </div>
             </div>
               
@@ -105,6 +105,25 @@
     color: $text-1;
     background-color: $background-6;
 
+    h3 {
+      margin-bottom: 25px;
+    }
+
+    p{
+      margin: 40px 0;
+    }
+
+    h6 {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+
+    span {
+      display: block;
+      margin-top: 30px;
+      color: $text-3;
+    }
+
     .ds-left {
 
       .ds-social {
@@ -121,8 +140,12 @@
       }
     }
 
-    .ds-footer-menu:hover a{
-      color: $text-3;
+    .ds-footer-menu {
+      margin: 15px 0;
+
+      &:hover a{
+        color: $text-3;
+      }
     }
 
     .ds-search-bar {
@@ -169,15 +192,6 @@
           }
         }
       }
-
-      span {
-        color: $text-3;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: $text-1;
     }
   }
 

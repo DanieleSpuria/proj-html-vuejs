@@ -81,5 +81,11 @@ input:focus {
 }
 
 .ds-icon {
-  width: 80px;
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+.ds-a {
+  text-decoration: none;
+  color: $text-1;
 }

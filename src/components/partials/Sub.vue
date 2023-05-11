@@ -56,18 +56,17 @@
         background-color: $background-1;
         border-radius: 50px;
 
-      input {
-        border: none;
-        border-radius: 50px;
-        color: $text-6;
+        input {
+          border: none;
+          border-radius: 50px;
+          color: $text-6;
+        }
+      
+        .ds-circle.ds-glass {
+          margin-right: 0;
+          width: 75px;
+        }
       }
-  
-      .ds-circle.ds-glass {
-        margin-right: 0;
-        width: 75px;
-      }
-    
-    }
     }
   }
 </style>

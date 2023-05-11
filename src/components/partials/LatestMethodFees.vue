@@ -49,7 +49,7 @@
                 <span>{{card.price}}</span>
               </div>
               <button class="ds-button ds-2 ds-3">
-                <a href="#">
+                <a class="ds-a" href="#">
                   <i class="fa-solid fa-eye"></i>
                   View Courses
                 </a>
@@ -69,7 +69,7 @@
           <h2>{{ exam.h2 }}</h2>
           <p>{{ exam.p }}</p>
           <button class="ds-button ds-2">
-            <a href="#">{{ exam.btn }}</a>
+            <a class="ds-a" href="#">{{ exam.btn }}</a>
           </button>
         </div>
         
@@ -93,6 +93,12 @@
   section {
     color: $text-13;
 
+    h2,
+    h3,
+    p {
+      margin-bottom: 40px;
+    }
+
     .ds-waves {
       height: 177px;
       transform: rotate(.02deg) scale(1.1);
@@ -111,11 +117,6 @@
 
         button {
           box-shadow: 0 0 0;
-
-          a {
-            text-decoration: none;
-            color: $text-1;
-          }
         }
       }
     }
@@ -127,14 +128,6 @@
       &:nth-of-type(3) {
         flex-direction: row-reverse;
         padding-bottom: 100px;
-      }
-
-      button {
-
-        a {
-          text-decoration: none;
-          color: $text-1;
-        }
       }
     }
   }

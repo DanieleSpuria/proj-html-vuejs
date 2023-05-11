@@ -95,6 +95,12 @@
   section {
     color: $text-1;
     background-color: $background-6;
+    
+    h2,
+    h3,
+    p {
+      margin-bottom: 40px;
+    }
 
     #year {
       padding-top: 100px;

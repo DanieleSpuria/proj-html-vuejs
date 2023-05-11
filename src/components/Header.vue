@@ -44,7 +44,7 @@
                 v-for="(li, i) of store.navMenu"
                 :key="i"
               >
-                <a href="#">{{ li.name }}</a>
+                <a class="ds-a" href="#">{{ li.name }}</a>
                 <i class="fa-solid fa-caret-down" v-if="li.menu"></i>
                 <ul
                   class="dropdown-menu"
@@ -55,7 +55,7 @@
                     v-for="(liMenu, iMenu) of li.menu"
                     :key="iMenu"
                   >
-                    <a href="#" class="ds-drop-a">{{ liMenu }}</a>
+                    <a href="#" class="ds-a ds-drop-a">{{ liMenu }}</a>
                   </li>
                 </ul>
               </li>
@@ -158,14 +158,8 @@
                   }
                 }
   
-                a {
-                  text-decoration: none;
-                  color: $text-1;
-
-                  
-                  &:hover {
-                    color: $text-3;
-                  }
+                .ds-a:hover {
+                  color: $text-3;
                 }
               }
             }
