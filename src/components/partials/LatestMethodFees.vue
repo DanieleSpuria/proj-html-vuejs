@@ -129,6 +129,16 @@
         flex-direction: row-reverse;
         padding-bottom: 100px;
       }
+      .ds-text {
+        width: 60%;
+        margin-right: 80px;
+      }
+
+      img:last-child {
+        width: 40%;
+        margin-right: 80px;
+
+      }
     }
   }
 </style>

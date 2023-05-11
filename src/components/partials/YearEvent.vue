@@ -102,6 +102,10 @@
       margin-bottom: 40px;
     }
 
+    h5 {
+      margin-top: 40px
+    }
+
     #year {
       padding-top: 100px;
       @include flex;
@@ -128,10 +132,12 @@
     }
 
    #event {
-    padding: 100px 0;
+    padding-top: 60px;
+    padding-bottom: 100px;
     text-align: center;
      .row {
-        margin: 80px;
+        margin-bottom: 120px;
+        margin-top: 60px;
         .ds-card {
          position: relative;
          padding: 40px 30px;

@@ -123,10 +123,20 @@
 
     .ds-back {
       background-image: url('../../assets/img/home-background.png');
+      background-repeat: no-repeat;
 
       #courses {
         @include flex('vertical');
         padding: 100px 0;
+
+        .ds-text {
+          width: 60%;
+          margin-right: 80px;
+        }
+
+        .ds-img {
+          width: 40%
+        }
       }
     }
 
@@ -142,6 +152,7 @@
 
         .ds-box-row {
           box-shadow: 0 0 15px $border-4;
+          margin-bottom: 60px;
 
           .col {
             padding: 0;
@@ -178,6 +189,15 @@
       .ds-bottom {
         @include flex;
         width: 100%;
+
+        img {
+          width: 40%;
+          margin-right: 80px;
+        }
+
+        .ds-text {
+          width: 61%;
+        }
       }
     }
   }
