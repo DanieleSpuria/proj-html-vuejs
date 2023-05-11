@@ -30,7 +30,7 @@
       <div id="year">
         <img :src="getImage(store.year.imgIcon)" class="ds-icon" alt="img">
         <h2>{{ store.year.h2 }}</h2>
-        <div class="ds-box">
+        <div class="ds-box ds-top">
           <div
             class="ds-box-text"
             v-for="(text, i) of store.year.textTop"
@@ -41,7 +41,7 @@
           </div>
         </div>
         <img :src="getImage(store.year.imgTime)" alt="img">
-        <div class="ds-box">
+        <div class="ds-box ds-bottom">
           <div
             class="ds-box-text"
             v-for="(text, i) of store.year.textBottom"
@@ -103,7 +103,21 @@
       text-align: center;
       .ds-box {
         display: flex;
-        width: 60%;
+        width: 80%;
+      }
+      
+      .ds-box.ds-top {
+        
+        .ds-box-text {
+          margin-left: 260px;
+        }
+      }
+
+      .ds-box.ds-bottom {
+        
+        .ds-box-text {
+          margin-right: 280px;
+        }
       }
     }
 

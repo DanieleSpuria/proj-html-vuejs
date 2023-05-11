@@ -77,7 +77,6 @@
         margin: 0;
         color: $text-1;
         background-color: $background-5;
-        cursor: pointer;
         
         img {
           width: 18px;
