@@ -58,6 +58,8 @@
   section {
     padding: 100px;
     color: $text-13;
+    background-image: url('../../assets/img/background-wave3.png');
+    background-color: $background-4 ;
 
     #partners {
       text-align: center;

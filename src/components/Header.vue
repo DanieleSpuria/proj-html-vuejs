@@ -69,6 +69,8 @@
       <div class="ds-header-bottom">
         <Jumbo/>
       </div>
+
+      <div class="ds-waves"></div>
     </div>
   </header>
 </template>
@@ -96,6 +98,11 @@
     position: relative;
     color: $text-1;
     overflow: hidden;
+
+    .ds-waves {
+      height: 133px;
+      background-image: url('../assets/img/Wave-1.png');
+    }
 
     .ds-box-header {
       background-color: #e56767d8;

@@ -26,6 +26,8 @@
 
 <template>
   <section>
+    <div class="ds-waves"></div>
+
     <div class="container">
       <div id="latest">
         <h2>{{ store.latest.h2 }}</h2>
@@ -90,6 +92,12 @@
 
   section {
     color: $text-13;
+
+    .ds-waves {
+      height: 177px;
+      transform: rotate(.02deg) scale(1.1);
+      background-image: url('../../assets/svg/svg-1.svg');
+    }
 
     #latest {
       padding-top: 100px;

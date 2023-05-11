@@ -33,18 +33,20 @@
 
 <template>
   <section>
-    <div class="container">
-      <div id="courses">
-        <div class="ds-text">
-          <img :src="getImage(store.courses.text.imgIcon)" class="ds-icon" alt="img">
-          <h2>{{ store.courses.text.h2 }}</h2>
-          <p>{{ store.courses.text.p }}</p>
-          <button class="ds-button ds-1"> 
-            <a href="#">{{ store.courses.text.btn }}</a>
-          </button>
-        </div>
-        <div class="ds-img">
-          <img :src="getImage(store.courses.img)" alt="img">
+    <div class="ds-back">
+      <div class="container">
+        <div id="courses">
+          <div class="ds-text">
+            <img :src="getImage(store.courses.text.imgIcon)" class="ds-icon" alt="img">
+            <h2>{{ store.courses.text.h2 }}</h2>
+            <p>{{ store.courses.text.p }}</p>
+            <button class="ds-button ds-1"> 
+              <a href="#">{{ store.courses.text.btn }}</a>
+            </button>
+          </div>
+          <div class="ds-img">
+            <img :src="getImage(store.courses.img)" alt="img">
+          </div>
         </div>
       </div>
     </div>
@@ -90,6 +92,7 @@
         </div>
       </div>
     </div>
+    <div class="ds-waves"></div>
   </section>
 </template>
 
@@ -107,10 +110,20 @@
   section {
     color: $text-13;
 
-    #courses {
-        @include flex('vertical');
-        padding-top: 100px;
-      }
+    .ds-waves {
+      height: 186px;
+      background-image: url('../../assets/svg/svg-0.svg');
+    }
+
+    .ds-back {
+      background-image: url('../../assets/img/home-background.png');
+
+      #courses {
+          @include flex('vertical');
+          padding: 100px 0;
+        }
+    }
+
 
     #faculties {
       @include flex('vertical');
