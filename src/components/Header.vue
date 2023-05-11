@@ -88,11 +88,17 @@
 
 
   .ds-img-slider {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: img 1s;
+  }
+
+  @keyframes img {
+    0% {opacity: 0};
+    100% {opacity: 1}
+  }  
 
   header {
     position: relative;

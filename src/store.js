@@ -52,7 +52,7 @@ export const store = reactive({
 
   slideJumbo: {
     showCase: {
-      h1: 'Shocase your courses',
+      h1: 'Showcase your courses',
       img: 'theme_slider0_bg-1.jpg'
     },
     key: {
