@@ -36,7 +36,7 @@
             v-for="(logo, i) of store.partners.logos"
             :key="i"
           >
-            <img :src="getImage(logo)" class="ds-icon" alt="logo">
+            <img :src="getImage(logo)" alt="logo">
           </div>
         </div>
       </div>
@@ -68,9 +68,11 @@
         
         .col {
           @include flex;
-          padding: 20px;
+          padding: 10px;
 
           img {
+            width: auto;
+            height: 50px;
             filter: invert(75%);
           }
         }
