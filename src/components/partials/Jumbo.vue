@@ -57,7 +57,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         Search courses
       </button>
-      <button class="ds-button ds-plus">
+      <button class="ds-button ds-plus ">
         <i class="fa-solid fa-user-plus"></i>
         Apply for university
       </button>
@@ -95,7 +95,7 @@
       margin-bottom: 50px;
     }
 
-    .ds-button-1.ds-plus {
+    .ds-button.ds-plus {
       color: $text-5;
       background-color: $background-1;
     }
